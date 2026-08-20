@@ -18,7 +18,7 @@
 
 ## 🔄 Operaciones CRUD y Consultas Avanzadas
 
-A través del archivo `cuentabancaria.sql` practico las operaciones fundamentales y consultas relacionales:
+A través de los scripts del proyecto practico las operaciones fundamentales y consultas relacionales:
 
 1. **Create (Crear)**: Inserción de datos utilizando `INSERT INTO`.
 2. **Read (Leer)**:
@@ -27,8 +27,10 @@ A través del archivo `cuentabancaria.sql` practico las operaciones fundamentale
    - Búsqueda por coincidencia de texto usando `LIKE` y comodines (`%`).
    - Ordenamiento de resultados con `ORDER BY` (`ASC` / `DESC`).
    - Renombrado de columnas y tablas usando alias (`AS`).
-   - Funciones de agregación para cálculos automáticos: `COUNT()` y `SUM()`.
+   - Funciones de agregación para cálculos automáticos: `COUNT()`, `SUM()`, `AVG()`.
    - Relación y cruce de datos entre múltiples tablas mediante `INNER JOIN ... ON`.
+   - Agrupamiento de datos con `GROUP BY`.
+   - Filtrado de agregaciones mediante `HAVING`.
 3. **Update (Actualizar)**: Modificación de registros existentes con `UPDATE ... SET` filtrando por la `PRIMARY KEY`.
 4. **Delete (Eliminar)**: Borrado seguro de datos respetando la integridad referencial de las `FOREIGN KEY`.
 
@@ -36,4 +38,5 @@ A través del archivo `cuentabancaria.sql` practico las operaciones fundamentale
 
 ## 📁 Archivos del Repositorio
 
-- **`cuentabancaria.sql`**: Script completo con la creación de tablas, inserción de datos, pruebas CRUD y consultas con `INNER JOIN`.
+- **`cuentabancaria.sql`**: Script base con creación de tablas, inserción de datos, pruebas CRUD y primer `INNER JOIN`.
+- **`cuentabancaria2.sql`**: Prácticas de agrupación con `GROUP BY`, agregaciones (`COUNT`, `SUM`, `AVG`) y filtros sobre agregados con `HAVING`.
