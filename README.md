@@ -16,17 +16,24 @@
 
 ---
 
-## 🔄 Operaciones CRUD
+## 🔄 Operaciones CRUD y Consultas Avanzadas
 
-A través del archivo `cuentabancaria.sql` practico las 4 operaciones fundamentales:
+A través del archivo `cuentabancaria.sql` practico las operaciones fundamentales y consultas relacionales:
 
 1. **Create (Crear)**: Inserción de datos utilizando `INSERT INTO`.
-2. **Read (Leer)**: Consultas con `SELECT`, filtrado con `WHERE`, búsquedas con `LIKE` y ordenamiento con `ORDER BY`.
-3. **Update (Actualizar)**: Modificación de registros existentes con `UPDATE ... SET` filtrando por ID.
-4. **Delete (Eliminar)**: Borrado seguro de datos respetando las restricciones de llave foránea mediante `DELETE FROM`.
+2. **Read (Leer)**:
+   - Consultas con `SELECT` y selección de columnas específicas.
+   - Filtrado de datos con `WHERE` (`BETWEEN`, `IN`, `AND`, `OR`).
+   - Búsqueda por coincidencia de texto usando `LIKE` y comodines (`%`).
+   - Ordenamiento de resultados con `ORDER BY` (`ASC` / `DESC`).
+   - Renombrado de columnas y tablas usando alias (`AS`).
+   - Funciones de agregación para cálculos automáticos: `COUNT()` y `SUM()`.
+   - Relación y cruce de datos entre múltiples tablas mediante `INNER JOIN ... ON`.
+3. **Update (Actualizar)**: Modificación de registros existentes con `UPDATE ... SET` filtrando por la `PRIMARY KEY`.
+4. **Delete (Eliminar)**: Borrado seguro de datos respetando la integridad referencial de las `FOREIGN KEY`.
 
 ---
 
 ## 📁 Archivos del Repositorio
 
-- **`cuentabancaria.sql`**: Script completo con la creación de las tablas `Clientes` y `Cuentas`, inserción de datos iniciales y consultas de prueba.
+- **`cuentabancaria.sql`**: Script completo con la creación de tablas, inserción de datos, pruebas CRUD y consultas con `INNER JOIN`.
