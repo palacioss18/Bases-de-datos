@@ -1,42 +1,214 @@
-# 🗄️ Aprendiendo Bases de Datos Relacionales (SQL)
+# 🗄️ SQL Server — Bases de Datos Relacionales y Backend
 
-¡Bienvenido a mi repositorio de aprendizaje de SQL! En este proyecto voy documentando mi progreso aprendiendo bases de datos relacionales desde cero utilizando **SQL Server**.
+Repositorio donde documento mi aprendizaje y práctica de **SQL Server**, comenzando por los fundamentos de las bases de datos relacionales y avanzando progresivamente hacia consultas complejas, diseño de bases de datos y conceptos utilizados en backend.
 
----
-
-## 📌 Conceptos Clave Aprendidos
-
-- **Tablas y Registros**: Creación de tablas (`CREATE TABLE`) con tipos de datos (`INT`, `VARCHAR`, `DECIMAL`, `DATE`).
-- **Llaves (Keys)**:
-  - `PRIMARY KEY` (`idCliente`, `idCuenta`): Identificador único e irrepetible para cada fila.
-  - `FOREIGN KEY` (`FK_Cuentas_Clientes`): Relación e integridad referencial entre la tabla `Cuentas` y `Clientes`.
-- **Restricciones y Autoincremento**:
-  - `IDENTITY(1,1)`: Asignación automática e incremental de IDs.
-  - `NOT NULL` y `UNIQUE`: Reglas para campos obligatorios y valores no repetidos.
+El objetivo es construir una base sólida en SQL y posteriormente aplicar estos conocimientos al desarrollo de **sistemas bancarios**.
 
 ---
 
-## 🔄 Operaciones CRUD y Consultas Avanzadas
+## 🎯 Objetivos
 
-A través de los scripts del proyecto practico las operaciones fundamentales y consultas relacionales:
-
-1. **Create (Crear)**: Inserción de datos utilizando `INSERT INTO`.
-2. **Read (Leer)**:
-   - Consultas con `SELECT` y selección de columnas específicas.
-   - Filtrado de datos con `WHERE` (`BETWEEN`, `IN`, `AND`, `OR`).
-   - Búsqueda por coincidencia de texto usando `LIKE` y comodines (`%`).
-   - Ordenamiento de resultados con `ORDER BY` (`ASC` / `DESC`).
-   - Renombrado de columnas y tablas usando alias (`AS`).
-   - Funciones de agregación para cálculos automáticos: `COUNT()`, `SUM()`, `AVG()`.
-   - Relación y cruce de datos entre múltiples tablas mediante `INNER JOIN ... ON`.
-   - Agrupamiento de datos con `GROUP BY`.
-   - Filtrado de agregaciones mediante `HAVING`.
-3. **Update (Actualizar)**: Modificación de registros existentes con `UPDATE ... SET` filtrando por la `PRIMARY KEY`.
-4. **Delete (Eliminar)**: Borrado seguro de datos respetando la integridad referencial de las `FOREIGN KEY`.
+* Dominar SQL Server.
+* Comprender el diseño y las relaciones entre bases de datos.
+* Resolver problemas utilizando consultas SQL.
+* Aprender SQL intermedio y avanzado.
+* Comprender transacciones y consistencia de datos.
+* Aplicar SQL en proyectos de backend.
+* Diseñar bases de datos orientadas a sistemas bancarios.
 
 ---
 
-## 📁 Archivos del Repositorio
+# 📚 Contenido
 
-- **`cuentabancaria.sql`**: Script base con creación de tablas, inserción de datos, pruebas CRUD y primer `INNER JOIN`.
-- **`cuentabancaria2.sql`**: Prácticas de agrupación con `GROUP BY`, agregaciones (`COUNT`, `SUM`, `AVG`) y filtros sobre agregados con `HAVING`.
+## 🟢 Nivel 1 — Fundamentos
+
+* [x] Bases de datos relacionales
+* [x] Tablas y registros
+* [x] `CREATE TABLE`
+* [x] `INSERT INTO`
+* [x] `SELECT`
+* [x] `UPDATE`
+* [x] `DELETE`
+* [x] Tipos de datos
+* [x] `PRIMARY KEY`
+* [x] `FOREIGN KEY`
+* [x] `IDENTITY`
+* [x] `NOT NULL`
+* [x] `UNIQUE`
+
+---
+
+## 🟡 Nivel 2 — SQL Intermedio
+
+* [x] `WHERE`
+* [x] `AND / OR`
+* [x] `IN`
+* [x] `BETWEEN`
+* [x] `LIKE`
+* [x] Comodines
+* [x] Alias con `AS`
+* [x] `ORDER BY`
+* [x] `INNER JOIN`
+* [x] `LEFT JOIN`
+* [x] `GROUP BY`
+* [x] `HAVING`
+* [x] `SUM()`
+* [x] `COUNT()`
+* [x] `AVG()`
+* [x] Manejo de `NULL`
+* [x] Consultas y reportes sobre varias tablas
+
+---
+
+## 🚧 Nivel 3 — SQL Intermedio/Avanzado
+
+Actualmente estoy trabajando en este nivel.
+
+* [ ] Subconsultas
+* [ ] Subconsultas correlacionadas
+* [ ] `CASE`
+* [ ] `COALESCE`
+* [ ] `EXISTS`
+* [ ] `NOT EXISTS`
+* [ ] CTE (`WITH`)
+* [ ] `ROW_NUMBER()`
+* [ ] `RANK()`
+* [ ] `DENSE_RANK()`
+* [ ] `OVER()`
+* [ ] `PARTITION BY`
+* [ ] Funciones de ventana
+* [ ] Consultas complejas
+* [ ] Reportes avanzados
+
+---
+
+## 🔜 Nivel 4 — SQL para Backend
+
+* [ ] Transacciones
+* [ ] `BEGIN TRANSACTION`
+* [ ] `COMMIT`
+* [ ] `ROLLBACK`
+* [ ] `TRY...CATCH`
+* [ ] Stored Procedures
+* [ ] Views
+* [ ] Triggers
+* [ ] Integridad de datos
+* [ ] Manejo de errores
+* [ ] Concurrencia
+
+---
+
+## 🔴 Nivel 5 — SQL Profesional
+
+* [ ] Índices
+* [ ] Índices clustered / non-clustered
+* [ ] Execution Plans
+* [ ] Optimización de consultas
+* [ ] Bloqueos
+* [ ] Deadlocks
+* [ ] Concurrencia avanzada
+* [ ] Normalización
+* [ ] Diseño de bases de datos
+* [ ] Optimización de rendimiento
+
+---
+
+# 🧪 Proyectos de Práctica
+
+## 🛒 Negocio
+
+Proyecto utilizado para practicar relaciones entre clientes y ventas.
+
+### Tablas
+
+```text
+Clientes
+   │
+   │ 1:N
+   ▼
+Ventas
+```
+
+Se practican:
+
+* `PRIMARY KEY`
+* `FOREIGN KEY`
+* `INNER JOIN`
+* `LEFT JOIN`
+* `GROUP BY`
+* `HAVING`
+* Funciones de agregación
+* `NULL`
+* Actualización de datos
+* Reportes
+* Consultas sobre registros relacionados y no relacionados
+
+---
+
+# 🏦 Próximamente — Proyectos Bancarios
+
+Una vez consolidado SQL avanzado, aplicaré los conocimientos en proyectos orientados al backend bancario.
+
+### Banco
+
+```text
+Clientes
+   │
+   ├── Cuentas
+   │      │
+   │      └── Movimientos
+   │
+   ├── Tarjetas
+   │
+   ├── Transferencias
+   │
+   └── Préstamos
+```
+
+### Proyectos previstos
+
+* 🏦 Sistema de cuentas bancarias
+* 💳 Sistema de tarjetas
+* 💸 Sistema de transferencias
+* 💰 Sistema de movimientos
+* 🏦 Sistema de préstamos
+
+El objetivo será aplicar conceptos de SQL como **transacciones, integridad de datos, consultas complejas y concurrencia** en escenarios similares a los que pueden aparecer en sistemas financieros.
+
+---
+
+# 🛠️ Tecnologías
+
+* **SQL Server**
+* **T-SQL**
+* **Git**
+* **GitHub**
+
+---
+
+# 📈 Progreso
+
+Mi aprendizaje sigue una progresión:
+
+```text
+SQL Básico
+    ↓
+SQL Intermedio
+    ↓
+SQL Intermedio/Avanzado
+    ↓
+SQL para Backend
+    ↓
+Optimización y Concurrencia
+    ↓
+Sistemas Bancarios
+```
+
+Este repositorio se actualiza a medida que incorporo nuevos conocimientos y proyectos.
+
+---
+
+## 📌 Objetivo Final
+
+Construir una base sólida en **SQL Server y bases de datos** para posteriormente integrarla con desarrollo backend y crear sistemas orientados principalmente al **sector bancario y financiero**.
+
