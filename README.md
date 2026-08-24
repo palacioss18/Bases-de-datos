@@ -1,24 +1,39 @@
-# 🗄️ SQL Server — Bases de Datos Relacionales y Backend
+# 🗄️ SQL Server + C# — Bases de Datos y Backend
 
-Repositorio donde documento mi aprendizaje y práctica de **SQL Server**, comenzando por los fundamentos de las bases de datos relacionales y avanzando progresivamente hacia consultas complejas, diseño de bases de datos y conceptos utilizados en backend.
+Repositorio donde documento mi aprendizaje y práctica de **SQL Server, T-SQL y C#**, comenzando por los fundamentos de las bases de datos relacionales y avanzando progresivamente hacia consultas complejas, programación orientada a objetos, conexión entre aplicaciones y bases de datos y desarrollo backend.
 
-El objetivo es construir una base sólida en SQL y posteriormente aplicar estos conocimientos al desarrollo de **sistemas bancarios**.
+El objetivo es construir una base sólida en **bases de datos + C# + backend**, con una orientación progresiva hacia el desarrollo de **sistemas bancarios y financieros**.
 
 ---
 
 ## 🎯 Objetivos
 
-* Dominar SQL Server.
-* Comprender el diseño y las relaciones entre bases de datos.
-* Resolver problemas utilizando consultas SQL.
-* Aprender SQL intermedio y avanzado.
+* Dominar SQL Server y T-SQL.
+* Comprender el diseño de bases de datos relacionales.
+* Aprender consultas SQL desde nivel básico hasta avanzado.
+* Aprender C# aplicado al desarrollo de aplicaciones.
+* Conectar aplicaciones C# con SQL Server.
+* Practicar CRUD desde C#.
 * Comprender transacciones y consistencia de datos.
-* Aplicar SQL en proyectos de backend.
-* Diseñar bases de datos orientadas a sistemas bancarios.
+* Aplicar programación orientada a objetos.
+* Desarrollar proyectos de backend.
+* Diseñar sistemas orientados al sector bancario.
 
 ---
 
-# 📚 Contenido
+# 🛠️ Tecnologías
+
+* **C#**
+* **.NET**
+* **SQL Server**
+* **T-SQL**
+* **ADO.NET**
+* **Git**
+* **GitHub**
+
+---
+
+# 📚 SQL Server
 
 ## 🟢 Nivel 1 — Fundamentos
 
@@ -64,7 +79,7 @@ El objetivo es construir una base sólida en SQL y posteriormente aplicar estos 
 
 Actualmente estoy trabajando en este nivel.
 
-* [ ] Subconsultas
+* [x] Subconsultas
 * [ ] Subconsultas correlacionadas
 * [ ] `CASE`
 * [ ] `COALESCE`
@@ -113,6 +128,47 @@ Actualmente estoy trabajando en este nivel.
 
 ---
 
+# 💻 C#
+
+## 🟢 Fundamentos
+
+* [x] Variables y tipos de datos
+* [x] Condicionales
+* [x] Bucles
+* [x] Métodos
+* [x] Arrays
+* [x] `List<T>`
+* [x] Manejo de excepciones
+* [x] Entrada y salida de datos
+
+## 🟡 Programación Orientada a Objetos
+
+* [x] Clases y objetos
+* [x] Constructores
+* [x] Encapsulamiento
+* [x] `public`
+* [x] `private`
+* [x] `protected`
+* [x] Herencia
+* [x] Polimorfismo
+* [x] Interfaces
+* [x] Clases abstractas
+
+## 🔵 C# + SQL Server
+
+* [ ] Conexión C# → SQL Server
+* [ ] ADO.NET
+* [ ] `SqlConnection`
+* [ ] `SqlCommand`
+* [ ] `SqlDataReader`
+* [ ] Parámetros SQL
+* [ ] CRUD desde C#
+* [ ] Consultas parametrizadas
+* [ ] Manejo de errores
+* [ ] Transacciones desde C#
+
+---
+
 # 🧪 Proyectos de Práctica
 
 ## 🛒 Negocio
@@ -129,7 +185,7 @@ Clientes
 Ventas
 ```
 
-Se practican:
+Conceptos practicados:
 
 * `PRIMARY KEY`
 * `FOREIGN KEY`
@@ -139,50 +195,101 @@ Se practican:
 * `HAVING`
 * Funciones de agregación
 * `NULL`
-* Actualización de datos
+* `UPDATE`
 * Reportes
 * Consultas sobre registros relacionados y no relacionados
 
 ---
 
-# 🏦 Próximamente — Proyectos Bancarios
+## 💻 Próximo proyecto — C# + SQL Server
 
-Una vez consolidado SQL avanzado, aplicaré los conocimientos en proyectos orientados al backend bancario.
+### 🏦 Sistema de Gestión de Cuentas Bancarias
 
-### Banco
+Primer proyecto de integración entre **C# y SQL Server**.
+
+### Base de datos
 
 ```text
 Clientes
    │
-   ├── Cuentas
-   │      │
-   │      └── Movimientos
+   │ 1:N
+   ▼
+Cuentas
    │
-   ├── Tarjetas
-   │
-   ├── Transferencias
-   │
-   └── Préstamos
+   │ 1:N
+   ▼
+Movimientos
 ```
+
+### Funcionalidades previstas
+
+* [ ] Registrar cliente
+* [ ] Consultar cliente
+* [ ] Modificar cliente
+* [ ] Eliminar cliente
+* [ ] Crear cuenta bancaria
+* [ ] Consultar cuenta
+* [ ] Consultar saldo
+* [ ] Depositar dinero
+* [ ] Retirar dinero
+* [ ] Registrar movimientos
+* [ ] Consultar movimientos
+* [ ] Conectar C# con SQL Server
+* [ ] Implementar CRUD con ADO.NET
+* [ ] Utilizar consultas parametrizadas
+* [ ] Implementar transacciones
+
+---
+
+# 🏦 Proyectos Bancarios Futuros
+
+Una vez consolidado SQL, C# y los conceptos de backend, desarrollaré proyectos independientes orientados al sector bancario.
 
 ### Proyectos previstos
 
 * 🏦 Sistema de cuentas bancarias
-* 💳 Sistema de tarjetas
 * 💸 Sistema de transferencias
+* 💳 Sistema de tarjetas
 * 💰 Sistema de movimientos
 * 🏦 Sistema de préstamos
 
-El objetivo será aplicar conceptos de SQL como **transacciones, integridad de datos, consultas complejas y concurrencia** en escenarios similares a los que pueden aparecer en sistemas financieros.
+Estos proyectos buscarán aplicar conceptos como:
+
+* SQL Server
+* C#
+* POO
+* ADO.NET
+* CRUD
+* Transacciones
+* Integridad de datos
+* Manejo de errores
+* Concurrencia
+* Diseño de bases de datos
 
 ---
 
-# 🛠️ Tecnologías
+# 📁 Estructura del repositorio
 
-* **SQL Server**
-* **T-SQL**
-* **Git**
-* **GitHub**
+```text
+Bases-de-datos/
+│
+├── README.md
+│
+├── SQL/
+│   ├── Nivel-01-Fundamentos/
+│   ├── Nivel-02-Intermedio/
+│   ├── Nivel-03-Intermedio-Avanzado/
+│   └── Nivel-04-Backend/
+│
+├── CSharp/
+│   ├── Fundamentos/
+│   ├── POO/
+│   └── SQLServer/
+│
+└── Proyectos/
+    ├── Negocio/
+    └── Gestion-Cuentas/
+```
 
 ---
 
@@ -197,18 +304,21 @@ SQL Intermedio
     ↓
 SQL Intermedio/Avanzado
     ↓
-SQL para Backend
+C# y POO
+    ↓
+C# + SQL Server
+    ↓
+Transacciones y Backend
     ↓
 Optimización y Concurrencia
     ↓
 Sistemas Bancarios
 ```
 
-Este repositorio se actualiza a medida que incorporo nuevos conocimientos y proyectos.
+Este repositorio se actualiza a medida que incorporo nuevos conocimientos, ejercicios y proyectos.
 
 ---
 
 ## 📌 Objetivo Final
 
-Construir una base sólida en **SQL Server y bases de datos** para posteriormente integrarla con desarrollo backend y crear sistemas orientados principalmente al **sector bancario y financiero**.
-
+Construir una base sólida en **SQL Server, C# y desarrollo backend**, utilizando estos conocimientos para desarrollar sistemas cada vez más complejos y orientados principalmente al **sector bancario y financiero**.
