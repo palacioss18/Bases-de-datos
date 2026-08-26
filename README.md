@@ -1,274 +1,143 @@
 # 🗄️ SQL Server + C# — Bases de Datos y Backend
 
-Repositorio donde documento mi aprendizaje y práctica de **SQL Server, T-SQL y C#**, comenzando por los fundamentos de las bases de datos relacionales y avanzando progresivamente hacia consultas complejas, programación orientada a objetos, conexión entre aplicaciones y bases de datos y desarrollo backend.
+Repositorio donde documento mi aprendizaje y práctica de **SQL Server, T-SQL y C#**, comenzando por los fundamentos de las bases de datos relacionales y avanzando progresivamente hacia consultas complejas, programación orientada a objetos, conexión entre aplicaciones y desarrollo backend.
 
-El objetivo es construir una base sólida en **bases de datos + C# + backend**, con una orientación progresiva hacia el desarrollo de **sistemas bancarios y financieros**.
+El objetivo principal es construir un perfil sólido en **SQL Server + C# + Backend**, con una orientación progresiva hacia el desarrollo de **sistemas bancarios y financieros**.
 
 ---
 
 ## 🎯 Objetivos
 
 * Dominar SQL Server y T-SQL.
-* Comprender el diseño de bases de datos relacionales.
-* Aprender consultas SQL desde nivel básico hasta avanzado.
-* Aprender C# aplicado al desarrollo de aplicaciones.
-* Conectar aplicaciones C# con SQL Server.
-* Practicar CRUD desde C#.
-* Comprender transacciones y consistencia de datos.
-* Aplicar programación orientada a objetos.
-* Desarrollar proyectos de backend.
-* Diseñar sistemas orientados al sector bancario.
+* Comprender el diseño y normalización de bases de datos relacionales.
+* Escribir desde consultas básicas hasta lógica compleja con funciones de ventana y CTEs.
+* Dominar C# orientado al desarrollo backend de aplicaciones robustas.
+* Integrar aplicaciones C# con SQL Server usando ADO.NET (CRUD, parámetros y transacciones).
+* Garantizar la consistencia e integridad de datos en escenarios concurrentes.
+* Diseñar e implementar sistemas orientados al sector bancario y financiero.
 
 ---
 
-# 🛠️ Tecnologías
+## 🛠️ Tecnologías
 
-* **C#**
-* **.NET**
-* **SQL Server**
-* **T-SQL**
-* **ADO.NET**
-* **Git**
-* **GitHub**
+* **Lenguajes:** C#, T-SQL (SQL Server)
+* **Plataforma & Librerías:** .NET Core / .NET SDK, ADO.NET
+* **Motor de BD:** SQL Server Management Studio (SSMS) / SQL Server
+* **Herramientas:** Git, GitHub
 
 ---
 
 # 📚 SQL Server
 
-## 🟢 Nivel 1 — Fundamentos
+## 🟢 Nivel 1 — DML y DDL Básico (Fundamentos)
 
-* [x] Bases de datos relacionales
-* [x] Tablas y registros
-* [x] `CREATE TABLE`
-* [x] `INSERT INTO`
-* [x] `SELECT`
-* [x] `UPDATE`
-* [x] `DELETE`
-* [x] Tipos de datos
-* [x] `PRIMARY KEY`
-* [x] `FOREIGN KEY`
-* [x] `IDENTITY`
-* [x] `NOT NULL`
-* [x] `UNIQUE`
+* [x] Modelado relacional (`PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `NOT NULL`, `IDENTITY`)
+* [x] Creación y manipulación básica (`CREATE TABLE`, `INSERT INTO`, `UPDATE`, `DELETE`)
+* [x] Consultas simples (`SELECT`, alias `AS`)
+* [x] Operadores de filtrado y orden (`WHERE`, `AND / OR`, `IN`, `BETWEEN`, `LIKE`, `ORDER BY`)
+* [x] Tipos de datos en SQL Server
 
 ---
 
-## 🟡 Nivel 2 — SQL Intermedio
+## 🟡 Nivel 2 — SQL Intermedio & Agregación
 
-* [x] `WHERE`
-* [x] `AND / OR`
-* [x] `IN`
-* [x] `BETWEEN`
-* [x] `LIKE`
-* [x] Comodines
-* [x] Alias con `AS`
-* [x] `ORDER BY`
-* [x] `INNER JOIN`
-* [x] `LEFT JOIN`
-* [x] `GROUP BY`
-* [x] `HAVING`
-* [x] `SUM()`
-* [x] `COUNT()`
-* [x] `AVG()`
-* [x] Manejo de `NULL`
-* [x] Consultas y reportes sobre varias tablas
+* [x] Combinación de tablas (`INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN`)
+* [x] Agrupamiento y métricas (`GROUP BY`, `HAVING`)
+* [x] Funciones de agregación (`SUM()`, `COUNT()`, `AVG()`, `MIN()`, `MAX()`)
+* [x] Manejo de valores nulos (`IS NULL`, `IS NOT NULL`)
+* [x] Lógica condicional básica en consultas (`CASE WHEN`)
 
 ---
 
-## 🚧 Nivel 3 — SQL Intermedio/Avanzado
+## 🚧 Nivel 3 — DML Avanzado & Funciones de Ventana
 
-Actualmente estoy trabajando en este nivel.
+Actualmente trabajando en esta sección.
 
-* [x] Subconsultas
-* [ ] Subconsultas correlacionadas
-* [ ] `CASE`
-* [ ] `COALESCE`
-* [ ] `EXISTS`
-* [ ] `NOT EXISTS`
-* [ ] CTE (`WITH`)
-* [ ] `ROW_NUMBER()`
-* [ ] `RANK()`
-* [ ] `DENSE_RANK()`
-* [ ] `OVER()`
-* [ ] `PARTITION BY`
-* [ ] Funciones de ventana
-* [ ] Consultas complejas
-* [ ] Reportes avanzados
+* [x] Subconsultas (Escalares y de lista)
+* [ ] Subconsultas correlacionadas (`EXISTS`, `NOT EXISTS`)
+* [ ] Manejo avanzado de `NULL` (`COALESCE`, `NULLIF`)
+* [ ] Expresiones de Tabla Comunes — CTEs (`WITH`) y CTEs recursivas
+* [ ] Funciones de Ventana — Posicionamiento y Ranking (`ROW_NUMBER()`, `RANK()`, `DENSE_RANK()`)
+* [ ] Clausulados analíticos (`OVER()`, `PARTITION BY`, `ORDER BY`)
+* [ ] Agregaciones sobre ventanas móvil (`SUM() OVER...`)
 
 ---
 
-## 🔜 Nivel 4 — SQL para Backend
+## 🔜 Nivel 4 — Programación en T-SQL & Backend BD
 
-* [ ] Transacciones
-* [ ] `BEGIN TRANSACTION`
-* [ ] `COMMIT`
-* [ ] `ROLLBACK`
-* [ ] `TRY...CATCH`
-* [ ] Stored Procedures
-* [ ] Views
-* [ ] Triggers
-* [ ] Integridad de datos
-* [ ] Manejo de errores
-* [ ] Concurrencia
+* [ ] Control de Transacciones (`BEGIN TRANSACTION`, `COMMIT`, `ROLLBACK`)
+* [ ] Control de Excepciones y Manejo de Errores (`TRY...CATCH`, `RAISERROR`, `THROW`)
+* [ ] Procedimientos Almacenados (Stored Procedures con parámetros `IN`/`OUT`)
+* [ ] Vistas (`VIEWS`) y Vistas Indizadas
+* [ ] Funciones Definidas por el Usuario (UDF Escalares y de Tabla)
+* [ ] Disparadores (`TRIGGERS` - `AFTER`, `INSTEAD OF`)
 
 ---
 
-## 🔴 Nivel 5 — SQL Profesional
+## 🔴 Nivel 5 — Optimización & Arquitectura Profesional
 
-* [ ] Índices
-* [ ] Índices clustered / non-clustered
-* [ ] Execution Plans
-* [ ] Optimización de consultas
-* [ ] Bloqueos
-* [ ] Deadlocks
-* [ ] Concurrencia avanzada
-* [ ] Normalización
-* [ ] Diseño de bases de datos
-* [ ] Optimización de rendimiento
+* [ ] Estrategias de Indización (`Clustered` vs `Non-Clustered`, Índices Incluidos)
+* [ ] Análisis de Planes de Ejecución (*Execution Plans*)
+* [ ] Detección de Cuellos de Botella y Tuning de Consultas
+* [ ] Gestión de Concurrencia (Niveles de Aislamiento, Bloqueos y *Deadlocks*)
+* [ ] Normalización de BD (1FN, 2FN, 3FN) y Desnormalización Estratégica
 
 ---
 
 # 💻 C#
 
-## 🟢 Fundamentos
+## 🟢 Fundamentos del Lenguaje
+* [x] Variables, tipos por valor/referencia y conversión de tipos
+* [x] Estructuras de control y flujo (`if/else`, `switch`, `for`, `foreach`, `while`)
+* [x] Métodos, firmas y paso de parámetros
+* [x] Colecciones básicas (`Arrays`, `List<T>`)
+* [x] Control de excepciones (`try-catch-finally`)
 
-* [x] Variables y tipos de datos
-* [x] Condicionales
-* [x] Bucles
-* [x] Métodos
-* [x] Arrays
-* [x] `List<T>`
-* [x] Manejo de excepciones
-* [x] Entrada y salida de datos
+## 🟡 Programación Orientada a Objetos (POO)
+* [x] Clases, objetos y ciclo de vida (Constructores/Destructores)
+* [x] Encapsulamiento y modificadores de acceso (`public`, `private`, `protected`, `internal`)
+* [x] Abstracción y Herencia
+* [x] Polimorfismo (Sobrecarga y Sobrescritura `override`)
+* [x] Contratos y Abstracción pura (`Interfaces` y `Clases Abstractas`)
 
-## 🟡 Programación Orientada a Objetos
-
-* [x] Clases y objetos
-* [x] Constructores
-* [x] Encapsulamiento
-* [x] `public`
-* [x] `private`
-* [x] `protected`
-* [x] Herencia
-* [x] Polimorfismo
-* [x] Interfaces
-* [x] Clases abstractas
-
-## 🔵 C# + SQL Server
-
-* [ ] Conexión C# → SQL Server
-* [ ] ADO.NET
-* [ ] `SqlConnection`
-* [ ] `SqlCommand`
-* [ ] `SqlDataReader`
-* [ ] Parámetros SQL
-* [ ] CRUD desde C#
-* [ ] Consultas parametrizadas
-* [ ] Manejo de errores
-* [ ] Transacciones desde C#
+## 🔵 C# + SQL Server (Capa de Datos / ADO.NET)
+* [ ] Cadenas de conexión (*Connection Strings*) y gestión de conexiones (`SqlConnection`)
+* [ ] Ejecución de comandos (`SqlCommand`, `ExecuteNonQuery`, `ExecuteScalar`, `ExecuteReader`)
+* [ ] Lectura eficiente de datos streaming (`SqlDataReader`)
+* [ ] Prevención de SQL Injection mediante Consultas Parametrizadas (`SqlParameter`)
+* [ ] Patrón Repositorio y Arquitectura en Capas
+* [ ] Gestión de Transacciones distribuida/explícita desde C# (`SqlTransaction`)
 
 ---
 
 # 🧪 Proyectos de Práctica
 
-## 🛒 Negocio
+## 🛒 1. Práctica DML: Sistema de Clientes y Ventas
+* **Descripción:** Base de datos relacional para modelar relaciones 1:N entre clientes y transacciones de venta.
+* **Conceptos aplicados:** Constraints (`PK`, `FK`), `JOINs`, agrupamientos con `GROUP BY/HAVING`, reportes con funciones de agregación y análisis de clientes sin compras asociadas.
 
-Proyecto utilizado para practicar relaciones entre clientes y ventas.
-
-### Tablas
-
-```text
-Clientes
-   │
-   │ 1:N
-   ▼
-Ventas
-```
-
-Conceptos practicados:
-
-* `PRIMARY KEY`
-* `FOREIGN KEY`
-* `INNER JOIN`
-* `LEFT JOIN`
-* `GROUP BY`
-* `HAVING`
-* Funciones de agregación
-* `NULL`
-* `UPDATE`
-* Reportes
-* Consultas sobre registros relacionados y no relacionados
-
----
-
-## 💻 Próximo proyecto — C# + SQL Server
-
-### 🏦 Sistema de Gestión de Cuentas Bancarias
-
-Primer proyecto de integración entre **C# y SQL Server**.
-
-### Base de datos
-
-```text
-Clientes
-   │
-   │ 1:N
-   ▼
-Cuentas
-   │
-   │ 1:N
-   ▼
-Movimientos
-```
-
-### Funcionalidades previstas
-
-* [ ] Registrar cliente
-* [ ] Consultar cliente
-* [ ] Modificar cliente
-* [ ] Eliminar cliente
-* [ ] Crear cuenta bancaria
-* [ ] Consultar cuenta
-* [ ] Consultar saldo
-* [ ] Depositar dinero
-* [ ] Retirar dinero
-* [ ] Registrar movimientos
-* [ ] Consultar movimientos
-* [ ] Conectar C# con SQL Server
-* [ ] Implementar CRUD con ADO.NET
-* [ ] Utilizar consultas parametrizadas
-* [ ] Implementar transacciones
+## 🏦 2. Integración Backend: Sistema de Gestión de Cuentas Bancarias (En Desarrollo)
+* **Descripción:** Aplicación de consola/servicio C# conectada a SQL Server para administración de operativas bancarias básicas.
+* **Arquitectura de BD:** `Clientes (1) ── (N) Cuentas (1) ── (N) Movimientos`
+* **Funcionalidades a implementar:**
+  * [ ] CRUD completo de clientes y cuentas mediante **ADO.NET**
+  * [ ] Depósitos y retiros garantizados por **Transacciones SQL / C#**
+  * [ ] Auditoría e historial de movimientos bancarios
+  * [ ] Manejo defensivo de errores y validaciones de saldo desde C# y Stored Procedures
 
 ---
 
 # 🏦 Proyectos Bancarios Futuros
 
-Una vez consolidado SQL, C# y los conceptos de backend, desarrollaré proyectos independientes orientados al sector bancario.
+Objetivos orientados a simular componentes reales de la industria financiera:
 
-### Proyectos previstos
-
-* 🏦 Sistema de cuentas bancarias
-* 💸 Sistema de transferencias
-* 💳 Sistema de tarjetas
-* 💰 Sistema de movimientos
-* 🏦 Sistema de préstamos
-
-Estos proyectos buscarán aplicar conceptos como:
-
-* SQL Server
-* C#
-* POO
-* ADO.NET
-* CRUD
-* Transacciones
-* Integridad de datos
-* Manejo de errores
-* Concurrencia
-* Diseño de bases de datos
+* 💳 **Sistema de Gestión de Tarjetas y Métricas de Consumo:** Crédito, débito, cierres de tarjeta y límites.
+* 💸 **Motor de Transferencias e Interbancarias:** Enfoque en transacciones ACID, manejo estricto de concurrencia y prevención de *deadlocks*.
+* 💰 **Sistema de Préstamos y Amortizaciones:** Cálculo analítico de cuotas usando funciones de ventana y ejecución de tablas de amortización.
 
 ---
 
-# 📁 Estructura del repositorio
+# 📁 Estructura del Repositorio
 
 ```text
 Bases-de-datos/
@@ -276,49 +145,16 @@ Bases-de-datos/
 ├── README.md
 │
 ├── SQL/
-│   ├── Nivel-01-Fundamentos/
-│   ├── Nivel-02-Intermedio/
-│   ├── Nivel-03-Intermedio-Avanzado/
-│   └── Nivel-04-Backend/
+│   ├── DML AVANZADO/
+│   ├── Funciones de Ventana/
+│   ├── Subconsultas/
+│   └── Programacion T-SQL/       # Stored Procedures, Triggers, Views
 │
 ├── CSharp/
 │   ├── Fundamentos/
 │   ├── POO/
-│   └── SQLServer/
+│   └── SQLServer-ADONET/
 │
 └── Proyectos/
-    ├── Negocio/
-    └── Gestion-Cuentas/
-```
-
----
-
-# 📈 Progreso
-
-Mi aprendizaje sigue una progresión:
-
-```text
-SQL Básico
-    ↓
-SQL Intermedio
-    ↓
-SQL Intermedio/Avanzado
-    ↓
-C# y POO
-    ↓
-C# + SQL Server
-    ↓
-Transacciones y Backend
-    ↓
-Optimización y Concurrencia
-    ↓
-Sistemas Bancarios
-```
-
-Este repositorio se actualiza a medida que incorporo nuevos conocimientos, ejercicios y proyectos.
-
----
-
-## 📌 Objetivo Final
-
-Construir una base sólida en **SQL Server, C# y desarrollo backend**, utilizando estos conocimientos para desarrollar sistemas cada vez más complejos y orientados principalmente al **sector bancario y financiero**.
+    ├── Negocio-Clientes-Ventas/
+    └── Sistema-Gestion-Bancaria/
